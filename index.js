@@ -18,7 +18,7 @@ const tasksCollectionName = 'tasks'
 app.get('/api/v1/tareas', async (req, res) => {
 
     const estado = req.query.estado
-    console.log(estado)
+    //console.log(estado)
 
     // 1. Conexion a la DB
     await dbClient.connect()
@@ -81,6 +81,7 @@ app.get('/api/v1/tareas/:id', async (req, res) => {
 app.post('/api/v1/tareas', async (req, res) => {
 
     const tasksData = req.body
+    console.log(tasksData)
 
     // 1. Conexion a la DB
     await dbClient.connect()
@@ -113,6 +114,7 @@ app.put('/api/v1/tareas/:id', async (req, res) => {
 
     const tasksData = req.body
     let id = req.params.id
+    console.log(tasksData)
 
     // 1. Conexion a la DB
     await dbClient.connect()
